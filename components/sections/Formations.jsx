@@ -127,7 +127,7 @@ export default function Formations() {
                   fontSize: 11,
                   fontWeight: 600,
                   letterSpacing: "1px",
-                  color: "rgba(242,242,240,0.15)",
+                  color: "rgba(242,242,240,0.25)",
                 }}
               >
                 {f.num}
@@ -188,7 +188,7 @@ export default function Formations() {
               <p
                 style={{
                   fontSize: 13,
-                  color: "rgba(242, 242, 240, 0.5)",
+                  color: "rgba(242, 242, 240, 0.6)",
                   lineHeight: 1.6,
                   marginBottom: 24,
                   flex: 1,

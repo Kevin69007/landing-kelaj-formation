@@ -46,7 +46,7 @@ export default function Header() {
             rel="noopener noreferrer"
             style={{
               fontSize: 14,
-              color: "rgba(242,242,240,0.6)",
+              color: "rgba(242,242,240,0.75)",
               transition: "color 0.25s",
             }}
           >

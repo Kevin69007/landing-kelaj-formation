@@ -36,7 +36,7 @@ export default function Marquee() {
               fontWeight: 500,
               letterSpacing: "2.5px",
               textTransform: "uppercase",
-              color: "rgba(242,242,240,0.25)",
+              color: "rgba(242,242,240,0.4)",
               whiteSpace: "nowrap",
             }}
           >

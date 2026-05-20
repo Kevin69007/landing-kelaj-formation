@@ -50,7 +50,7 @@ export default function SocialProof() {
                   fontWeight: 500,
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  color: "rgba(242,242,240,0.35)",
+                  color: "rgba(242,242,240,0.55)",
                 }}
               >
                 {s.label}
@@ -125,7 +125,7 @@ export default function SocialProof() {
           <p
             style={{
               fontSize: 12,
-              color: "rgba(242,242,240,0.35)",
+              color: "rgba(242,242,240,0.5)",
               letterSpacing: "0.5px",
             }}
           >

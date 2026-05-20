@@ -96,7 +96,7 @@ img {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: rgba(242, 242, 240, 0.55);
+  color: rgba(242, 242, 240, 0.7);
   max-width: 520px;
 }
 
@@ -193,40 +193,43 @@ img {
    EFFETS DE LUMIÈRE & TEXTURES
    ============================================================ */
 
+/* Lumière structurelle — très discrète, pas laser */
 .beam {
   position: absolute;
-  top: -20%;
+  top: -15%;
   left: 50%;
   transform: translateX(-50%);
-  width: 240px;
-  height: 140%;
+  width: 320px;
+  height: 130%;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(30, 104, 255, 0.12) 25%,
-    rgba(199, 138, 74, 0.08) 55%,
+    rgba(15, 35, 90, 0.18) 20%,
+    rgba(30, 104, 255, 0.06) 45%,
+    rgba(199, 138, 74, 0.04) 65%,
     transparent 100%
   );
-  filter: blur(50px);
+  filter: blur(70px);
   pointer-events: none;
   z-index: 0;
 }
 
-.beam-thin {
+/* Fils central quasi invisible — juste de la profondeur */
+.beam-core {
   position: absolute;
-  top: -10%;
+  top: -5%;
   left: 50%;
   transform: translateX(-50%);
-  width: 2px;
-  height: 120%;
+  width: 1px;
+  height: 110%;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(30, 104, 255, 0.3) 30%,
-    rgba(199, 138, 74, 0.2) 60%,
+    rgba(30, 104, 255, 0.08) 35%,
+    rgba(199, 138, 74, 0.05) 60%,
     transparent 100%
   );
-  filter: blur(1px);
+  opacity: 0.6;
   pointer-events: none;
   z-index: 0;
 }
@@ -268,7 +271,7 @@ img {
    ============================================================ */
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   transition: color 0.25s ease;
   text-decoration: none;
   font-size: 14px;
@@ -279,14 +282,14 @@ img {
 }
 
 .footer-legal {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.45);
   transition: color 0.25s ease;
   text-decoration: none;
   font-size: 13px;
 }
 
 .footer-legal:hover {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ============================================================

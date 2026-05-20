@@ -11,7 +11,7 @@ export default function FinalCTA() {
     >
       {/* Beam */}
       <div className="beam" />
-      <div className="beam-thin" />
+      <div className="beam-core" />
 
       {/* Halos */}
       <div
@@ -59,7 +59,7 @@ export default function FinalCTA() {
           <p
             style={{
               fontSize: 16,
-              color: "rgba(242,242,240,0.5)",
+              color: "rgba(242,242,240,0.65)",
               lineHeight: 1.6,
               margin: "0 auto 40px",
               maxWidth: 480,

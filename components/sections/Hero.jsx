@@ -9,11 +9,11 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Beam lumineux central */}
+      {/* Lumière structurelle — très discrète */}
       <div className="beam" />
-      <div className="beam-thin" />
+      <div className="beam-core" />
 
-      {/* Halo cuivre */}
+      {/* Halo cuivre subtil */}
       <div
         className="halo-copper"
         style={{
@@ -24,10 +24,10 @@ export default function Hero() {
           height: 500,
           borderRadius: "50%",
           pointerEvents: "none",
-          opacity: 0.5,
+          opacity: 0.35,
         }}
       />
-      {/* Halo bleu */}
+      {/* Halo bleu subtil */}
       <div
         className="halo-blue"
         style={{
@@ -38,7 +38,7 @@ export default function Hero() {
           height: 400,
           borderRadius: "50%",
           pointerEvents: "none",
-          opacity: 0.5,
+          opacity: 0.35,
         }}
       />
 
@@ -47,7 +47,7 @@ export default function Hero() {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr auto",
-            gap: 48,
+            gap: 64,
             alignItems: "center",
           }}
         >
@@ -76,7 +76,7 @@ export default function Hero() {
               style={{
                 fontSize: "clamp(16px, 1.8vw, 18px)",
                 lineHeight: 1.6,
-                color: "rgba(242,242,240,0.55)",
+                color: "rgba(242,242,240,0.7)",
                 maxWidth: 480,
                 marginBottom: 36,
               }}
@@ -133,7 +133,7 @@ export default function Hero() {
                 flexWrap: "wrap",
                 gap: "16px 28px",
                 fontSize: 12,
-                color: "rgba(242,242,240,0.4)",
+                color: "rgba(242,242,240,0.6)",
                 letterSpacing: "0.5px",
               }}
             >
@@ -162,77 +162,110 @@ export default function Hero() {
                     fill="var(--k-cuivre)"
                   />
                 </svg>
-                Certifiantes & reconnues
+                Certifiantes &amp; reconnues
               </span>
             </div>
           </div>
 
-          {/* Colonne droite — Metrics */}
+          {/* Colonne droite — Metrics + preuves */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: 40,
-              minWidth: 180,
+              gap: 28,
+              minWidth: 200,
             }}
           >
-            <div>
-              <div
-                style={{
-                  fontSize: 11,
-                  fontWeight: 500,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  color: "rgba(242,242,240,0.35)",
-                  marginBottom: 8,
-                }}
-              >
-                Formations
-              </div>
-              <div
-                style={{
-                  fontSize: "clamp(36px, 4vw, 48px)",
-                  fontWeight: 700,
-                  lineHeight: 1,
-                  color: "var(--k-casse)",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                2 100<span style={{ fontSize: 24, color: "var(--k-cuivre)" }}>+</span>
-              </div>
+            {/* 4 Metrics */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              {[
+                { label: "Formations", value: "2 100", suffix: "+" },
+                { label: "Expertise", value: "10", suffix: "+" },
+                { label: "Domaines", value: "22", suffix: "+" },
+                { label: "En ligne", value: "100", suffix: "%" },
+              ].map((m, i) => (
+                <div key={i}>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      fontWeight: 500,
+                      letterSpacing: "2px",
+                      textTransform: "uppercase",
+                      color: "rgba(242,242,240,0.55)",
+                      marginBottom: 6,
+                    }}
+                  >
+                    {m.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "clamp(32px, 3.5vw, 42px)",
+                      fontWeight: 700,
+                      lineHeight: 1,
+                      color: "var(--k-casse)",
+                      letterSpacing: "-0.02em",
+                    }}
+                  >
+                    {m.value}
+                    <span style={{ fontSize: 20, color: "var(--k-cuivre)" }}>
+                      {m.suffix}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div>
+
+            {/* Mini bloc de preuves */}
+            <div
+              className="glass"
+              style={{ padding: "20px", borderRadius: 10 }}
+            >
               <div
                 style={{
-                  fontSize: 11,
-                  fontWeight: 500,
+                  fontSize: 10,
+                  fontWeight: 600,
                   letterSpacing: "2px",
                   textTransform: "uppercase",
-                  color: "rgba(242,242,240,0.35)",
-                  marginBottom: 8,
+                  color: "var(--k-cuivre)",
+                  marginBottom: 14,
                 }}
               >
-                Expertise
+                Notre stack
               </div>
               <div
                 style={{
-                  fontSize: "clamp(36px, 4vw, 48px)",
-                  fontWeight: 700,
-                  lineHeight: 1,
-                  color: "var(--k-casse)",
-                  letterSpacing: "-0.02em",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 10,
                 }}
               >
-                10<span style={{ fontSize: 24, color: "var(--k-cuivre)" }}>+</span>
-              </div>
-              <div
-                style={{
-                  fontSize: 13,
-                  color: "rgba(242,242,240,0.4)",
-                  marginTop: 4,
-                }}
-              >
-                ans
+                {[
+                  "Accompagnement 1:1",
+                  "Certification incluse",
+                  "Accès illimité",
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 8,
+                      fontSize: 12,
+                      color: "rgba(242,242,240,0.6)",
+                    }}
+                  >
+                    <span
+                      style={{
+                        width: 5,
+                        height: 5,
+                        borderRadius: "50%",
+                        background: "var(--k-cuivre)",
+                        flexShrink: 0,
+                      }}
+                    />
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
           </div>

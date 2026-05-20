@@ -33,7 +33,7 @@ export default function Footer() {
               style={{
                 fontSize: 13,
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(255,255,255,0.55)",
                 maxWidth: 280,
               }}
             >
@@ -175,7 +175,7 @@ export default function Footer() {
           <p
             style={{
               fontSize: 12,
-              color: "rgba(255,255,255,0.25)",
+              color: "rgba(255,255,255,0.4)",
             }}
           >
             © {new Date().getFullYear()} Kelaj Formation
