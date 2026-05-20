@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer
@@ -40,6 +42,18 @@ export default function Footer() {
               Formations professionnelles certifiantes en ligne.
               Business · Finance · IA.
             </p>
+            <Image
+              src="/assets/img/logo-square.png"
+              alt="Kelaj Formation"
+              width={64}
+              height={64}
+              style={{
+                objectFit: "contain",
+                filter: "brightness(0) invert(1)",
+                marginTop: 16,
+                opacity: 0.9,
+              }}
+            />
           </div>
 
           <div>

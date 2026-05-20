@@ -28,7 +28,7 @@ export default function Header() {
           rel="noopener noreferrer"
         >
           <Image
-            src="/assets/img/logo-kelaj-transparent.png"
+            src="/assets/img/logo-horizontal.png"
             alt="Kelaj Formation"
             width={160}
             height={42}
