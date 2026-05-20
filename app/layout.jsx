@@ -1,12 +1,13 @@
+import './globals.css';
+
 export const metadata = {
-  title: "Kelaj Formation — Business · Finance · IA",
+  title: 'Kelaj Formation — Business · Finance · IA',
   description:
     "Formations professionnelles : IA, création d'entreprise, bureautique, langues. Accompagnement personnalisé, résultats mesurables.",
   openGraph: {
-    title: "Kelaj Formation — Business · Finance · IA",
-    description:
-      "Formations professionnelles certifiantes en ligne.",
-    type: "website",
+    title: 'Kelaj Formation — Business · Finance · IA',
+    description: 'Formations professionnelles certifiantes en ligne.',
+    type: 'website',
   },
 };
 
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
           rel="stylesheet"
         />
       </head>

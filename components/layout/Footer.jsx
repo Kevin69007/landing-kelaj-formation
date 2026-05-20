@@ -3,28 +3,27 @@ export default function Footer() {
     <footer
       style={{
         background: "#08080C",
-        color: "var(--kelaj-blanc-casse)",
-        padding: "72px 0 32px",
-        borderTop: "1px solid rgba(255,255,255,0.04)",
+        color: "var(--k-casse)",
+        padding: "64px 0 28px",
+        borderTop: "1px solid rgba(255,255,255,0.03)",
       }}
     >
       <div className="container">
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 48,
-            marginBottom: 56,
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: 40,
+            marginBottom: 48,
           }}
         >
-          {/* Brand */}
           <div>
             <h3
               style={{
-                fontSize: 18,
+                fontSize: 16,
                 fontWeight: 700,
-                color: "var(--kelaj-blanc-casse)",
-                marginBottom: 16,
+                color: "var(--k-casse)",
+                marginBottom: 12,
                 letterSpacing: "-0.01em",
               }}
             >
@@ -32,37 +31,36 @@ export default function Footer() {
             </h3>
             <p
               style={{
-                fontSize: 14,
+                fontSize: 13,
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.5)",
-                maxWidth: 300,
+                color: "rgba(255,255,255,0.4)",
+                maxWidth: 280,
               }}
             >
-              Formations professionnelles certifiantes en ligne. Business ·
-              Finance · IA.
+              Formations professionnelles certifiantes en ligne.
+              Business · Finance · IA.
             </p>
           </div>
 
-          {/* Formations */}
           <div>
             <h4
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: 600,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "var(--kelaj-cuivre)",
-                marginBottom: 20,
+                color: "var(--k-cuivre)",
+                marginBottom: 16,
               }}
             >
-              Nos formations
+              Formations
             </h4>
             <ul
               style={{
                 listStyle: "none",
                 display: "flex",
                 flexDirection: "column",
-                gap: 12,
+                gap: 10,
               }}
             >
               <li>
@@ -72,7 +70,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                  Formations IA Pro
+                  IA Pro
                 </a>
               </li>
               <li>
@@ -108,16 +106,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Entreprise */}
           <div>
             <h4
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: 600,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "var(--kelaj-cuivre)",
-                marginBottom: 20,
+                color: "var(--k-cuivre)",
+                marginBottom: 16,
               }}
             >
               Entreprise
@@ -127,7 +124,7 @@ export default function Footer() {
                 listStyle: "none",
                 display: "flex",
                 flexDirection: "column",
-                gap: 12,
+                gap: 10,
               }}
             >
               <li>
@@ -147,7 +144,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                  Catalogue formations
+                  Catalogue
                 </a>
               </li>
               <li>
@@ -164,35 +161,33 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
-            paddingTop: 24,
+            borderTop: "1px solid rgba(255,255,255,0.04)",
+            paddingTop: 20,
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "center",
-            gap: 16,
+            gap: 12,
           }}
         >
           <p
             style={{
-              fontSize: 13,
-              color: "rgba(255,255,255,0.3)",
+              fontSize: 12,
+              color: "rgba(255,255,255,0.25)",
             }}
           >
-            © {new Date().getFullYear()} Kelaj Formation — Tous droits
-            réservés
+            © {new Date().getFullYear()} Kelaj Formation
           </p>
-          <div style={{ display: "flex", gap: 24 }}>
+          <div style={{ display: "flex", gap: 20 }}>
             <a
               href="https://formation.kelaj-company.com/cookiepolicy"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-legal"
             >
-              Politique de cookies
+              Cookies
             </a>
             <a
               href="https://formation.kelaj-company.com/cgv"

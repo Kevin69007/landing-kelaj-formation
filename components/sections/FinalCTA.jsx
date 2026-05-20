@@ -1,76 +1,78 @@
 export default function FinalCTA() {
   return (
     <section
-      className="bg-dark bg-grid-fine"
+      className="grid-fine"
       style={{
-        padding: "100px 0",
         position: "relative",
+        background: "linear-gradient(180deg, #0E0E12 0%, #0A0E1F 100%)",
+        padding: "120px 0",
         overflow: "hidden",
       }}
     >
-      {/* Halo cuivre */}
+      {/* Beam */}
+      <div className="beam" />
+      <div className="beam-thin" />
+
+      {/* Halos */}
       <div
         className="halo-copper"
         style={{
           position: "absolute",
-          top: "-30%",
-          right: "-10%",
-          width: 700,
-          height: 700,
-          borderRadius: "50%",
-          pointerEvents: "none",
-          opacity: 0.35,
-        }}
-      />
-      {/* Halo bleu */}
-      <div
-        className="halo-blue"
-        style={{
-          position: "absolute",
-          bottom: "-30%",
-          left: "-10%",
+          top: "-20%",
+          right: "-5%",
           width: 600,
           height: 600,
           borderRadius: "50%",
           pointerEvents: "none",
-          opacity: 0.5,
+          opacity: 0.3,
+        }}
+      />
+      <div
+        className="halo-blue"
+        style={{
+          position: "absolute",
+          bottom: "-20%",
+          left: "-5%",
+          width: 500,
+          height: 500,
+          borderRadius: "50%",
+          pointerEvents: "none",
+          opacity: 0.3,
         }}
       />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div
-          style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}
-        >
+        <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
           <span
             className="label"
-            style={{
-              display: "inline-block",
-              marginBottom: 20,
-            }}
+            style={{ display: "inline-block", marginBottom: 20 }}
           >
             Prochaine étape
           </span>
-          <h2
-            className="section-title"
-            style={{
-              marginBottom: 20,
-            }}
-          >
-            Prêt à transformer votre carrière ?
+          <h2 className="section-title" style={{ marginBottom: 16 }}>
+            Prêt à{" "}
+            <span className="font-serif" style={{ fontStyle: "italic", color: "var(--k-cuivre)" }}>
+              transformer
+            </span>{" "}
+            votre carrière ?
           </h2>
           <p
-            className="display-sub"
-            style={{ margin: "0 auto 40px", maxWidth: 540 }}
+            style={{
+              fontSize: 16,
+              color: "rgba(242,242,240,0.5)",
+              lineHeight: 1.6,
+              margin: "0 auto 40px",
+              maxWidth: 480,
+            }}
           >
             Que vous soyez indépendant, salarié ou dirigeant, nous avons une
-            formation adaptée à vos objectifs. Parlez-en à un conseiller ou
-            explorez notre catalogue.
+            formation adaptée à vos objectifs.
           </p>
           <div
             style={{
               display: "flex",
               flexWrap: "wrap",
-              gap: 16,
+              gap: 14,
               justifyContent: "center",
             }}
           >
@@ -80,13 +82,8 @@ export default function FinalCTA() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Prendre RDV avec un conseiller
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
+              Prendre RDV
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
                   d="M3 8H13M13 8L9 4M13 8L9 12"
                   stroke="currentColor"
@@ -100,7 +97,7 @@ export default function FinalCTA() {
               href="https://formation.kelaj-company.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-ghost"
+              className="btn-secondary"
             >
               Explorer le catalogue
             </a>
