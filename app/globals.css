@@ -1,11 +1,24 @@
-/* Charte graphique Kelaj Formation */
+/* ============================================================
+   Kelaj Formation — Landing Page Instagram
+   Direction : Premium institutionnel moderne
+   Palette : Bleu profond #0B1B3D · Or #C5A55A · Blanc · Blanc cassé #F8F7F4
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --kelaj-bleu: #0c1e3f;
-  --kelaj-or: #c5a55a;
-  --kelaj-blanc: #ffffff;
-  --kelaj-gris: #f4f4f4;
-  --kelaj-texte: #1a1a1a;
-  --kelaj-texte-secondaire: #555555;
+  --kelaj-bleu: #0B1B3D;
+  --kelaj-bleu-moyen: #162D5C;
+  --kelaj-bleu-clair: #1E3A6F;
+  --kelaj-or: #C5A55A;
+  --kelaj-or-clair: #D4B978;
+  --kelaj-or-pale: rgba(197, 165, 90, 0.12);
+  --kelaj-blanc: #FFFFFF;
+  --kelaj-casse: #F8F7F4;
+  --kelaj-gris: #E8E6E1;
+  --kelaj-texte: #0F172A;
+  --kelaj-texte-secondaire: #475569;
+  --kelaj-texte-tertiaire: #94A3B8;
 }
 
 * {
@@ -16,14 +29,16 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   background: var(--kelaj-blanc);
   color: var(--kelaj-texte);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 a {
@@ -37,60 +52,147 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
-/* Boutons */
+/* ============================================================
+   TYPOGRAPHIE — Hiérarchie premium
+   ============================================================ */
+
+.display {
+  font-size: clamp(38px, 5.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--kelaj-bleu);
+}
+
+.display-sub {
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--kelaj-texte-secondaire);
+  max-width: 560px;
+}
+
+.section-title {
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--kelaj-bleu);
+}
+
+.section-sub {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--kelaj-texte-secondaire);
+  max-width: 520px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--kelaj-or);
+}
+
+/* ============================================================
+   BOUTONS
+   ============================================================ */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 16px 32px;
+  gap: 10px;
+  padding: 18px 36px;
   background: var(--kelaj-bleu);
-  color: var(--kelaj-or);
+  color: var(--kelaj-blanc);
   font-weight: 600;
   font-size: 15px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 14px rgba(11, 27, 61, 0.18);
 }
 
 .btn-primary:hover {
-  background: #162d5c;
+  background: var(--kelaj-bleu-moyen);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(12, 30, 63, 0.25);
+  box-shadow: 0 8px 28px rgba(11, 27, 61, 0.28);
 }
 
 .btn-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 16px 32px;
+  gap: 10px;
+  padding: 18px 36px;
   background: transparent;
   color: var(--kelaj-bleu);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
-  border-radius: 8px;
-  border: 2px solid var(--kelaj-bleu);
+  border-radius: 6px;
+  border: 1.5px solid rgba(11, 27, 61, 0.15);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-secondary:hover {
   background: var(--kelaj-bleu);
-  color: var(--kelaj-or);
+  color: var(--kelaj-blanc);
+  border-color: var(--kelaj-bleu);
 }
 
-/* Animations */
+/* ============================================================
+   SURFACES & PROFONDEUR
+   ============================================================ */
+
+.surface {
+  background: var(--kelaj-blanc);
+  border: 1px solid rgba(11, 27, 61, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(11, 27, 61, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.surface:hover {
+  box-shadow: 0 12px 40px rgba(11, 27, 61, 0.1);
+  border-color: rgba(11, 27, 61, 0.1);
+  transform: translateY(-4px);
+}
+
+.surface-elevated {
+  background: var(--kelaj-blanc);
+  border: 1px solid rgba(11, 27, 61, 0.08);
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(11, 27, 61, 0.04),
+    0 8px 24px rgba(11, 27, 61, 0.06);
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--kelaj-or);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -98,13 +200,83 @@ img {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease forwards;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive */
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ============================================================
+   GHOST BUTTON — fond sombre
+   ============================================================ */
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 36px;
+  background: transparent;
+  color: var(--kelaj-blanc);
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.25s ease;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: var(--kelaj-blanc);
+}
+
+.footer-legal {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.25s ease;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer-legal:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
 @media (max-width: 768px) {
   .container {
-    padding: 0 16px;
+    padding: 0 20px;
+  }
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    width: 100%;
+    padding: 16px 24px;
   }
 }

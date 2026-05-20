@@ -1,107 +1,169 @@
+"use client";
+
+const stats = [
+  {
+    number: "+ de 10",
+    label: "Années d'expertise",
+    desc: "Dans la formation professionnelle et le conseil en entreprise",
+  },
+  {
+    number: "2 100+",
+    label: "Formations dispensées",
+    desc: "Auprès de professionnels dans tous les secteurs d'activité",
+  },
+  {
+    number: "22+",
+    label: "Domaines couverts",
+    desc: "De l'IA à la création d'entreprise, en passant par la santé",
+  },
+  {
+    number: "100 %",
+    label: "En ligne & flexible",
+    desc: "Apprenez à votre rythme, où que vous soyez, sans contrainte",
+  },
+];
+
 export default function SocialProof() {
   return (
-    <section style={{ padding: "80px 0", background: "var(--kelaj-bleu)" }}>
+    <section style={{ padding: "100px 0", background: "var(--kelaj-casse)" }}>
       <div className="container">
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 64 }}>
+          <span
+            className="label"
+            style={{ display: "inline-block", marginBottom: 16 }}
+          >
+            Notre expérience
+          </span>
+          <h2 className="section-title" style={{ marginBottom: 16 }}>
+            Des chiffres qui parlent
+          </h2>
+          <div className="divider" style={{ margin: "0 auto 16px" }} />
+          <p className="section-sub" style={{ margin: "0 auto" }}>
+            Une expertise reconnue, des résultats mesurables, des professionnels
+            formés avec exigence.
+          </p>
+        </div>
+
+        {/* Stats Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: 32,
-            textAlign: "center",
+            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: 24,
+            marginBottom: 80,
           }}
         >
-          <div>
+          {stats.map((s, i) => (
             <div
-              style={{
-                fontSize: "clamp(36px, 5vw, 48px)",
-                fontWeight: 700,
-                color: "var(--kelaj-or)",
-                marginBottom: 8,
-              }}
+              key={i}
+              className="surface"
+              style={{ padding: "40px 28px", textAlign: "center" }}
             >
-              + de 10
+              <div
+                style={{
+                  fontSize: "clamp(32px, 4vw, 42px)",
+                  fontWeight: 700,
+                  color: "var(--kelaj-or)",
+                  marginBottom: 10,
+                  lineHeight: 1,
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                {s.number}
+              </div>
+              <div
+                style={{
+                  fontSize: "15px",
+                  fontWeight: 600,
+                  color: "var(--kelaj-bleu)",
+                  marginBottom: 8,
+                }}
+              >
+                {s.label}
+              </div>
+              <div
+                style={{
+                  fontSize: "13px",
+                  color: "var(--kelaj-texte-secondaire)",
+                  lineHeight: 1.55,
+                }}
+              >
+                {s.desc}
+              </div>
             </div>
-            <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)" }}>
-              Années d'expérience
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                fontSize: "clamp(36px, 5vw, 48px)",
-                fontWeight: 700,
-                color: "var(--kelaj-or)",
-                marginBottom: 8,
-              }}
-            >
-              2 100+
-            </div>
-            <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)" }}>
-              Formations dispensées
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                fontSize: "clamp(36px, 5vw, 48px)",
-                fontWeight: 700,
-                color: "var(--kelaj-or)",
-                marginBottom: 8,
-              }}
-            >
-              22+
-            </div>
-            <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)" }}>
-              Domaines de compétences
-            </div>
-          </div>
-          <div>
-            <div
-              style={{
-                fontSize: "clamp(36px, 5vw, 48px)",
-                fontWeight: 700,
-                color: "var(--kelaj-or)",
-                marginBottom: 8,
-              }}
-            >
-              100%
-            </div>
-            <div style={{ fontSize: "15px", color: "rgba(255,255,255,0.8)" }}>
-              En ligne & flexible
-            </div>
-          </div>
+          ))}
         </div>
 
+        {/* Testimonial */}
         <div
+          className="surface-elevated"
           style={{
-            marginTop: 56,
+            maxWidth: 800,
+            margin: "0 auto",
+            padding: "52px 44px",
             textAlign: "center",
-            padding: "32px",
-            background: "rgba(255,255,255,0.05)",
-            borderRadius: 16,
-            border: "1px solid rgba(197, 165, 90, 0.2)",
+            position: "relative",
           }}
         >
-          <p
+          <div
             style={{
-              fontSize: "18px",
-              fontStyle: "italic",
-              color: "rgba(255,255,255,0.9)",
-              maxWidth: 700,
-              margin: "0 auto 16px",
-              lineHeight: 1.6,
+              position: "absolute",
+              top: 28,
+              left: 36,
+              fontSize: 80,
+              lineHeight: 1,
+              color: "var(--kelaj-or)",
+              opacity: 0.12,
+              fontFamily: "Georgia, serif",
+              fontWeight: 700,
+              userSelect: "none",
             }}
           >
-            "Kelaj Formation m'a permis de me reconvertir dans l'IA appliquée à mon métier. Un accompagnement vraiment professionnel."
+            &ldquo;
+          </div>
+          <p
+            style={{
+              fontSize: "clamp(16px, 2vw, 20px)",
+              fontStyle: "italic",
+              color: "var(--kelaj-texte)",
+              lineHeight: 1.7,
+              marginBottom: 28,
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            Kelaj Formation m&apos;a permis de me reconvertir dans l&apos;IA
+            appliquée à mon métier. Un accompagnement vraiment professionnel,
+            des contenus pointus et une pédagogie qui fait la différence. Je
+            recommande vivement.
+          </p>
+          <div
+            style={{
+              width: 40,
+              height: 2,
+              background: "var(--kelaj-or)",
+              margin: "0 auto 20px",
+              borderRadius: 1,
+            }}
+          />
+          <p
+            style={{
+              fontSize: "15px",
+              fontWeight: 600,
+              color: "var(--kelaj-bleu)",
+              marginBottom: 4,
+            }}
+          >
+            Sophie L.
           </p>
           <p
             style={{
-              fontSize: "14px",
-              fontWeight: 600,
-              color: "var(--kelaj-or)",
+              fontSize: "13px",
+              color: "var(--kelaj-texte-tertiaire)",
             }}
           >
-            — Sophie L., Architecte
+            Architecte d&apos;intérieur — Formation IA Pro
           </p>
         </div>
       </div>
