@@ -4,68 +4,89 @@ const stats = [
   {
     number: "+ de 10",
     label: "Années d'expertise",
-    desc: "Dans la formation professionnelle et le conseil en entreprise",
+    desc: "Formation & conseil en entreprise",
   },
   {
     number: "2 100+",
     label: "Formations dispensées",
-    desc: "Auprès de professionnels dans tous les secteurs d'activité",
+    desc: "Dans tous les secteurs d'activité",
   },
   {
     number: "22+",
     label: "Domaines couverts",
-    desc: "De l'IA à la création d'entreprise, en passant par la santé",
+    desc: "De l'IA à la création d'entreprise",
   },
   {
     number: "100 %",
     label: "En ligne & flexible",
-    desc: "Apprenez à votre rythme, où que vous soyez, sans contrainte",
+    desc: "Apprenez à votre rythme",
   },
 ];
 
 export default function SocialProof() {
   return (
-    <section style={{ padding: "100px 0", background: "var(--kelaj-casse)" }}>
-      <div className="container">
+    <section
+      className="bg-casse"
+      style={{ padding: "100px 0", position: "relative" }}
+    >
+      {/* Grille technique fine */}
+      <div
+        className="bg-grid-fine-dark"
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.4,
+          pointerEvents: "none",
+        }}
+      />
+
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
           <span
             className="label"
-            style={{ display: "inline-block", marginBottom: 16 }}
+            style={{
+              display: "inline-block",
+              marginBottom: 16,
+              color: "var(--kelaj-cuivre)",
+            }}
           >
             Notre expérience
           </span>
-          <h2 className="section-title" style={{ marginBottom: 16 }}>
+          <h2
+            className="section-title section-title-dark"
+            style={{ marginBottom: 16 }}
+          >
             Des chiffres qui parlent
           </h2>
           <div className="divider" style={{ margin: "0 auto 16px" }} />
           <p className="section-sub" style={{ margin: "0 auto" }}>
-            Une expertise reconnue, des résultats mesurables, des professionnels
-            formés avec exigence.
+            Une expertise reconnue, des résultats mesurables, des
+            professionnels formés avec exigence.
           </p>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 24,
-            marginBottom: 80,
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: 20,
+            marginBottom: 64,
           }}
         >
           {stats.map((s, i) => (
             <div
               key={i}
-              className="surface"
-              style={{ padding: "40px 28px", textAlign: "center" }}
+              className="surface-elevated"
+              style={{ padding: "36px 24px", textAlign: "center" }}
             >
               <div
                 style={{
                   fontSize: "clamp(32px, 4vw, 42px)",
                   fontWeight: 700,
-                  color: "var(--kelaj-or)",
-                  marginBottom: 10,
+                  color: "var(--kelaj-cuivre)",
+                  marginBottom: 8,
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
                 }}
@@ -76,8 +97,8 @@ export default function SocialProof() {
                 style={{
                   fontSize: "15px",
                   fontWeight: 600,
-                  color: "var(--kelaj-bleu)",
-                  marginBottom: 8,
+                  color: "var(--kelaj-bleu-nuit)",
+                  marginBottom: 6,
                 }}
               >
                 {s.label}
@@ -86,7 +107,7 @@ export default function SocialProof() {
                 style={{
                   fontSize: "13px",
                   color: "var(--kelaj-texte-secondaire)",
-                  lineHeight: 1.55,
+                  lineHeight: 1.5,
                 }}
               >
                 {s.desc}
@@ -95,9 +116,9 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Testimonial */}
+        {/* Témoignage */}
         <div
-          className="surface-elevated"
+          className="card-dark"
           style={{
             maxWidth: 800,
             margin: "0 auto",
@@ -113,7 +134,7 @@ export default function SocialProof() {
               left: 36,
               fontSize: 80,
               lineHeight: 1,
-              color: "var(--kelaj-or)",
+              color: "var(--kelaj-cuivre)",
               opacity: 0.12,
               fontFamily: "Georgia, serif",
               fontWeight: 700,
@@ -126,7 +147,7 @@ export default function SocialProof() {
             style={{
               fontSize: "clamp(16px, 2vw, 20px)",
               fontStyle: "italic",
-              color: "var(--kelaj-texte)",
+              color: "var(--kelaj-blanc-casse)",
               lineHeight: 1.7,
               marginBottom: 28,
               position: "relative",
@@ -142,7 +163,7 @@ export default function SocialProof() {
             style={{
               width: 40,
               height: 2,
-              background: "var(--kelaj-or)",
+              background: "var(--kelaj-cuivre)",
               margin: "0 auto 20px",
               borderRadius: 1,
             }}
@@ -151,7 +172,7 @@ export default function SocialProof() {
             style={{
               fontSize: "15px",
               fontWeight: 600,
-              color: "var(--kelaj-bleu)",
+              color: "var(--kelaj-blanc-casse)",
               marginBottom: 4,
             }}
           >
@@ -160,7 +181,7 @@ export default function SocialProof() {
           <p
             style={{
               fontSize: "13px",
-              color: "var(--kelaj-texte-tertiaire)",
+              color: "rgba(242,242,240,0.45)",
             }}
           >
             Architecte d&apos;intérieur — Formation IA Pro

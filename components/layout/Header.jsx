@@ -4,8 +4,10 @@ export default function Header() {
   return (
     <header
       style={{
-        background: "var(--kelaj-blanc)",
-        borderBottom: "1px solid rgba(12, 30, 63, 0.08)",
+        background: "rgba(10, 14, 31, 0.85)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
         position: "sticky",
         top: 0,
         zIndex: 100,
@@ -20,13 +22,20 @@ export default function Header() {
           height: 72,
         }}
       >
-        <a href="https://formation.kelaj-company.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://formation.kelaj-company.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
-            src="/assets/img/logo-kelaj-blanc.png"
+            src="/assets/img/logo-kelaj-transparent.png"
             alt="Kelaj Formation"
             width={180}
             height={48}
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "contain",
+              filter: "brightness(0) invert(1)",
+            }}
             priority
           />
         </a>

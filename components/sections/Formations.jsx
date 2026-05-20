@@ -1,16 +1,79 @@
 "use client";
 
+const IconBrain = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+  >
+    <path d="M12 2C7.5 2 4 5.5 4 10C4 14.5 7.5 21 12 21C16.5 21 20 14.5 20 10C20 5.5 16.5 2 12 2Z" />
+    <path d="M12 2V21" />
+    <path d="M7.5 8C9.5 10 14.5 10 16.5 8" />
+    <path d="M7.5 14C9.5 12 14.5 12 16.5 14" />
+  </svg>
+);
+
+const IconRocket = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 2.5C12 2.5 16 7 16 12V15.5L12 18L8 15.5V12C8 7 12 2.5 12 2.5Z" />
+    <path d="M8 15.5C6.5 16.5 5.5 18.5 5.5 20.5C5.5 20.5 7.5 19.5 8.5 17.5" />
+    <path d="M16 15.5C17.5 16.5 18.5 18.5 18.5 20.5C18.5 20.5 16.5 19.5 15.5 17.5" />
+    <circle cx="12" cy="11" r="2" />
+  </svg>
+);
+
+const IconShield = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" />
+  </svg>
+);
+
+const IconCubes = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+    <path d="M2 17L12 22L22 17" />
+    <path d="M2 12L12 17L22 12" />
+  </svg>
+);
+
 const formations = [
   {
     id: "ia",
     titre: "Formations IA Pro",
     description:
       "Intégrez l'intelligence artificielle dans votre pratique quotidienne. 26 spécialités par métier.",
-    picto: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M14 2L17 10H25L18.5 15.5L21 24L14 19L7 24L9.5 15.5L3 10H11L14 2Z" fill="currentColor" />
-      </svg>
-    ),
+    icon: <IconBrain />,
     lien: "https://formation.kelaj-company.com/formations-ia",
     tag: "Nouveau",
   },
@@ -19,12 +82,7 @@ const formations = [
     titre: "Création d'entreprise",
     description:
       "Lancez votre business avec succès. Comptabilité, trésorerie, impôts, marketing.",
-    picto: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M14 2L26 10V26H2V10L14 2Z" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 26V16H18V26" stroke="currentColor" strokeWidth="2" fill="none" />
-      </svg>
-    ),
+    icon: <IconRocket />,
     lien: "https://formation.kelaj-company.com/categories/Entrepreneur",
     tag: null,
   },
@@ -33,12 +91,7 @@ const formations = [
     titre: "Formation dentaire",
     description:
       "Toutes les formations pour les professionnels de la santé bucco-dentaire.",
-    picto: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <path d="M14 3C10 3 6 6 6 11C6 16 10 25 14 25C18 25 22 16 22 11C22 6 18 3 14 3Z" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 11H18" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
+    icon: <IconShield />,
     lien: "https://formations-dentaire.fr",
     tag: null,
   },
@@ -47,12 +100,7 @@ const formations = [
     titre: "Bureautique & Langues",
     description:
       "Excel, Word, PowerPoint, anglais, espagnol, chinois et plus encore.",
-    picto: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-        <rect x="4" y="2" width="20" height="24" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M8 8H20M8 14H20M8 20H14" stroke="currentColor" strokeWidth="2" />
-      </svg>
-    ),
+    icon: <IconCubes />,
     lien: "https://formation.kelaj-company.com/services",
     tag: null,
   },
@@ -60,19 +108,44 @@ const formations = [
 
 export default function Formations() {
   return (
-    <section style={{ padding: "100px 0", background: "var(--kelaj-blanc)" }}>
-      <div className="container">
-        {/* Header de section */}
+    <section
+      className="bg-casse"
+      style={{ padding: "100px 0", position: "relative" }}
+    >
+      {/* Grille technique fine sur fond clair */}
+      <div
+        className="bg-grid-fine-dark"
+        style={{
+          position: "absolute",
+          inset: 0,
+          opacity: 0.5,
+          pointerEvents: "none",
+        }}
+      />
+
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+        {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 64 }}>
-          <span className="label" style={{ display: "inline-block", marginBottom: 16 }}>
+          <span
+            className="label"
+            style={{
+              display: "inline-block",
+              marginBottom: 16,
+              color: "var(--kelaj-cuivre)",
+            }}
+          >
             Nos domaines
           </span>
-          <h2 className="section-title" style={{ marginBottom: 16 }}>
+          <h2
+            className="section-title section-title-dark"
+            style={{ marginBottom: 16 }}
+          >
             Formations phares
           </h2>
           <div className="divider" style={{ margin: "0 auto 16px" }} />
           <p className="section-sub" style={{ margin: "0 auto" }}>
-            Quatre piliers pour développer vos compétences et accélérer votre carrière.
+            Quatre piliers pour développer vos compétences et accélérer votre
+            carrière.
           </p>
         </div>
 
@@ -90,7 +163,7 @@ export default function Formations() {
               href={f.lien}
               target="_blank"
               rel="noopener noreferrer"
-              className="surface"
+              className="card-dark"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -99,13 +172,20 @@ export default function Formations() {
                 position: "relative",
                 overflow: "hidden",
               }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(197, 165, 90, 0.35)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(11, 27, 61, 0.06)";
-              }}
             >
+              {/* Ligne cuivre en haut */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 36,
+                  right: 36,
+                  height: 1,
+                  background:
+                    "linear-gradient(90deg, transparent, rgba(199,138,74,0.4), transparent)",
+                }}
+              />
+
               {/* Tag */}
               {f.tag && (
                 <span
@@ -117,8 +197,8 @@ export default function Formations() {
                     fontWeight: 600,
                     letterSpacing: "1px",
                     textTransform: "uppercase",
-                    color: "var(--kelaj-or)",
-                    background: "var(--kelaj-or-pale)",
+                    color: "var(--kelaj-cuivre)",
+                    background: "rgba(199, 138, 74, 0.12)",
                     padding: "4px 10px",
                     borderRadius: 4,
                   }}
@@ -133,15 +213,16 @@ export default function Formations() {
                   width: 56,
                   height: 56,
                   borderRadius: 12,
-                  background: "var(--kelaj-bleu)",
-                  color: "var(--kelaj-or)",
+                  background: "rgba(199, 138, 74, 0.08)",
+                  color: "var(--kelaj-cuivre)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   marginBottom: 28,
+                  border: "1px solid rgba(199, 138, 74, 0.12)",
                 }}
               >
-                {f.picto}
+                {f.icon}
               </div>
 
               {/* Contenu */}
@@ -149,7 +230,7 @@ export default function Formations() {
                 style={{
                   fontSize: 20,
                   fontWeight: 700,
-                  color: "var(--kelaj-bleu)",
+                  color: "var(--kelaj-blanc-casse)",
                   marginBottom: 10,
                   letterSpacing: "-0.01em",
                 }}
@@ -159,7 +240,7 @@ export default function Formations() {
               <p
                 style={{
                   fontSize: 14,
-                  color: "var(--kelaj-texte-secondaire)",
+                  color: "rgba(242, 242, 240, 0.65)",
                   lineHeight: 1.6,
                   marginBottom: 28,
                   flex: 1,
@@ -176,18 +257,17 @@ export default function Formations() {
                   gap: 8,
                   fontSize: 14,
                   fontWeight: 600,
-                  color: "var(--kelaj-or)",
+                  color: "var(--kelaj-cuivre)",
                   transition: "gap 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.gap = "12px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.gap = "8px";
                 }}
               >
                 Découvrir
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                >
                   <path
                     d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5"
                     stroke="currentColor"

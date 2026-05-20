@@ -1,11 +1,11 @@
 export const metadata = {
-  title: "Kelaj Formation — Formez-vous avec les experts",
+  title: "Kelaj Formation — Business · Finance · IA",
   description:
-    "Découvrez nos formations professionnelles : IA, création d'entreprise, bureautique, langues, santé. Prenez RDV avec un conseiller ou explorez notre catalogue.",
+    "Formations professionnelles : IA, création d'entreprise, bureautique, langues. Accompagnement personnalisé, résultats mesurables.",
   openGraph: {
-    title: "Kelaj Formation — Formez-vous avec les experts",
+    title: "Kelaj Formation — Business · Finance · IA",
     description:
-      "Découvrez nos formations professionnelles : IA, création d'entreprise, bureautique, langues, santé.",
+      "Formations professionnelles certifiantes en ligne.",
     type: "website",
   },
 };

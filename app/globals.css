@@ -1,22 +1,24 @@
-/* ============================================================
-   Kelaj Formation — Landing Page Instagram
-   Direction : Premium institutionnel moderne
-   Palette : Bleu profond #0B1B3D · Or #C5A55A · Blanc · Blanc cassé #F8F7F4
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --kelaj-bleu: #0B1B3D;
-  --kelaj-bleu-moyen: #162D5C;
-  --kelaj-bleu-clair: #1E3A6F;
-  --kelaj-or: #C5A55A;
-  --kelaj-or-clair: #D4B978;
-  --kelaj-or-pale: rgba(197, 165, 90, 0.12);
-  --kelaj-blanc: #FFFFFF;
-  --kelaj-casse: #F8F7F4;
-  --kelaj-gris: #E8E6E1;
-  --kelaj-texte: #0F172A;
+  /* Palette KELAJ — Charte Graphique Complémentaire */
+  --kelaj-bleu-nuit: #0A0E1F;
+  --kelaj-noir-charbon: #0E0E12;
+  --kelaj-blanc-casse: #F2F2F0;
+  --kelaj-cuivre: #C78A4A;
+  --kelaj-cuivre-clair: #D9A066;
+  --kelaj-cuivre-pale: rgba(199, 138, 74, 0.12);
+  --kelaj-bleu-electrique: #1E68FF;
+  --kelaj-bleu-electrique-pale: rgba(30, 104, 255, 0.08);
+
+  /* Alias legacy pour compatibilité interne */
+  --kelaj-bleu: #0A0E1F;
+  --kelaj-blanc: #F2F2F0;
+  --kelaj-or: #C78A4A;
+  --kelaj-or-clair: #D9A066;
+  --kelaj-or-pale: rgba(199, 138, 74, 0.12);
+
+  --kelaj-texte: #0A0E1F;
   --kelaj-texte-secondaire: #475569;
   --kelaj-texte-tertiaire: #94A3B8;
 }
@@ -35,8 +37,8 @@ html {
 
 body {
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  background: var(--kelaj-blanc);
-  color: var(--kelaj-texte);
+  background: var(--kelaj-noir-charbon);
+  color: var(--kelaj-blanc-casse);
   line-height: 1.6;
   font-weight: 400;
 }
@@ -52,37 +54,41 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 28px;
 }
 
 /* ============================================================
-   TYPOGRAPHIE — Hiérarchie premium
+   TYPOGRAPHIE — Éditorial premium
    ============================================================ */
 
 .display {
-  font-size: clamp(38px, 5.5vw, 64px);
+  font-size: clamp(40px, 6vw, 72px);
   font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  color: var(--kelaj-bleu);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--kelaj-blanc-casse);
 }
 
 .display-sub {
-  font-size: clamp(17px, 2vw, 21px);
+  font-size: clamp(17px, 2vw, 20px);
   font-weight: 400;
-  line-height: 1.55;
-  color: var(--kelaj-texte-secondaire);
+  line-height: 1.6;
+  color: rgba(242, 242, 240, 0.7);
   max-width: 560px;
 }
 
 .section-title {
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-size: clamp(28px, 3.5vw, 42px);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: var(--kelaj-bleu);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--kelaj-blanc-casse);
+}
+
+.section-title-dark {
+  color: var(--kelaj-bleu-nuit);
 }
 
 .section-sub {
@@ -94,11 +100,11 @@ img {
 }
 
 .label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--kelaj-or);
+  color: var(--kelaj-cuivre);
 }
 
 /* ============================================================
@@ -111,8 +117,8 @@ img {
   justify-content: center;
   gap: 10px;
   padding: 18px 36px;
-  background: var(--kelaj-bleu);
-  color: var(--kelaj-blanc);
+  background: var(--kelaj-cuivre);
+  color: var(--kelaj-noir-charbon);
   font-weight: 600;
   font-size: 15px;
   border-radius: 6px;
@@ -120,13 +126,13 @@ img {
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.01em;
-  box-shadow: 0 4px 14px rgba(11, 27, 61, 0.18);
+  box-shadow: 0 4px 20px rgba(199, 138, 74, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--kelaj-bleu-moyen);
+  background: var(--kelaj-cuivre-clair);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(11, 27, 61, 0.28);
+  box-shadow: 0 8px 30px rgba(199, 138, 74, 0.35);
 }
 
 .btn-secondary {
@@ -136,86 +142,20 @@ img {
   gap: 10px;
   padding: 18px 36px;
   background: transparent;
-  color: var(--kelaj-bleu);
+  color: var(--kelaj-blanc-casse);
   font-weight: 500;
   font-size: 15px;
   border-radius: 6px;
-  border: 1.5px solid rgba(11, 27, 61, 0.15);
+  border: 1.5px solid rgba(242, 242, 240, 0.2);
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-secondary:hover {
-  background: var(--kelaj-bleu);
-  color: var(--kelaj-blanc);
-  border-color: var(--kelaj-bleu);
+  background: rgba(242, 242, 240, 0.08);
+  border-color: rgba(242, 242, 240, 0.4);
+  color: var(--kelaj-blanc-casse);
 }
-
-/* ============================================================
-   SURFACES & PROFONDEUR
-   ============================================================ */
-
-.surface {
-  background: var(--kelaj-blanc);
-  border: 1px solid rgba(11, 27, 61, 0.06);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(11, 27, 61, 0.04);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.surface:hover {
-  box-shadow: 0 12px 40px rgba(11, 27, 61, 0.1);
-  border-color: rgba(11, 27, 61, 0.1);
-  transform: translateY(-4px);
-}
-
-.surface-elevated {
-  background: var(--kelaj-blanc);
-  border: 1px solid rgba(11, 27, 61, 0.08);
-  border-radius: 16px;
-  box-shadow:
-    0 1px 2px rgba(11, 27, 61, 0.04),
-    0 8px 24px rgba(11, 27, 61, 0.06);
-}
-
-.divider {
-  width: 48px;
-  height: 2px;
-  background: var(--kelaj-or);
-  border-radius: 2px;
-}
-
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-/* ============================================================
-   GHOST BUTTON — fond sombre
-   ============================================================ */
 
 .btn-ghost {
   display: inline-flex;
@@ -224,11 +164,11 @@ img {
   gap: 10px;
   padding: 18px 36px;
   background: transparent;
-  color: var(--kelaj-blanc);
+  color: var(--kelaj-blanc-casse);
   font-weight: 500;
   font-size: 15px;
   border-radius: 6px;
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
@@ -240,22 +180,150 @@ img {
 }
 
 /* ============================================================
+   SURFACES, VERRE & PROFONDEUR
+   ============================================================ */
+
+.surface {
+  background: var(--kelaj-blanc-casse);
+  border: 1px solid rgba(10, 14, 31, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(10, 14, 31, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.surface:hover {
+  box-shadow: 0 12px 40px rgba(10, 14, 31, 0.12);
+  border-color: rgba(10, 14, 31, 0.12);
+  transform: translateY(-4px);
+}
+
+.surface-elevated {
+  background: var(--kelaj-blanc-casse);
+  border: 1px solid rgba(10, 14, 31, 0.08);
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(10, 14, 31, 0.04),
+    0 8px 24px rgba(10, 14, 31, 0.08);
+}
+
+.card-dark {
+  background: linear-gradient(145deg, #0F1325 0%, #0A0E1F 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-dark:hover {
+  border-color: rgba(199, 138, 74, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--kelaj-cuivre);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   FONDS & TEXTURES
+   ============================================================ */
+
+.bg-dark {
+  background: linear-gradient(180deg, #0A0E1F 0%, #0E0E12 100%);
+}
+
+.bg-charcoal {
+  background: #0E0E12;
+}
+
+.bg-casse {
+  background: var(--kelaj-blanc-casse);
+}
+
+.bg-grid-fine {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-grid-fine-dark {
+  background-image:
+    linear-gradient(rgba(10, 14, 31, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 14, 31, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ============================================================
+   HALOS & GLOWS
+   ============================================================ */
+
+.halo-copper {
+  background: radial-gradient(circle, rgba(199, 138, 74, 0.15) 0%, transparent 70%);
+}
+
+.halo-blue {
+  background: radial-gradient(circle, rgba(30, 104, 255, 0.1) 0%, transparent 70%);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.03); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.55);
   transition: color 0.25s ease;
   text-decoration: none;
   font-size: 14px;
 }
 
 .footer-link:hover {
-  color: var(--kelaj-blanc);
+  color: var(--kelaj-blanc-casse);
 }
 
 .footer-legal {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.35);
   transition: color 0.25s ease;
   text-decoration: none;
   font-size: 13px;

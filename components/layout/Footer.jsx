@@ -2,9 +2,10 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#08142E",
-        color: "var(--kelaj-blanc)",
+        background: "#08080C",
+        color: "var(--kelaj-blanc-casse)",
         padding: "72px 0 32px",
+        borderTop: "1px solid rgba(255,255,255,0.04)",
       }}
     >
       <div className="container">
@@ -20,9 +21,9 @@ export default function Footer() {
           <div>
             <h3
               style={{
-                fontSize: "18px",
+                fontSize: 18,
                 fontWeight: 700,
-                color: "var(--kelaj-blanc)",
+                color: "var(--kelaj-blanc-casse)",
                 marginBottom: 16,
                 letterSpacing: "-0.01em",
               }}
@@ -31,15 +32,14 @@ export default function Footer() {
             </h3>
             <p
               style={{
-                fontSize: "14px",
+                fontSize: 14,
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.6)",
+                color: "rgba(255,255,255,0.5)",
                 maxWidth: 300,
               }}
             >
-              Formations professionnelles certifiantes en ligne.
-              Accompagnement personnalisé pour développer vos compétences et
-              accélérer votre carrière.
+              Formations professionnelles certifiantes en ligne. Business ·
+              Finance · IA.
             </p>
           </div>
 
@@ -47,11 +47,11 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                fontSize: "13px",
+                fontSize: 12,
                 fontWeight: 600,
-                letterSpacing: "1.5px",
+                letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "var(--kelaj-or)",
+                color: "var(--kelaj-cuivre)",
                 marginBottom: 20,
               }}
             >
@@ -102,7 +102,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                  Bureautique & Langues
+                  Bureautique &amp; Langues
                 </a>
               </li>
             </ul>
@@ -112,11 +112,11 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                fontSize: "13px",
+                fontSize: 12,
                 fontWeight: 600,
-                letterSpacing: "1.5px",
+                letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "var(--kelaj-or)",
+                color: "var(--kelaj-cuivre)",
                 marginBottom: 20,
               }}
             >
@@ -167,7 +167,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.08)",
+            borderTop: "1px solid rgba(255,255,255,0.06)",
             paddingTop: 24,
             display: "flex",
             flexWrap: "wrap",
@@ -178,11 +178,12 @@ export default function Footer() {
         >
           <p
             style={{
-              fontSize: "13px",
-              color: "rgba(255,255,255,0.4)",
+              fontSize: 13,
+              color: "rgba(255,255,255,0.3)",
             }}
           >
-            © {new Date().getFullYear()} Kelaj Formation — Tous droits réservés
+            © {new Date().getFullYear()} Kelaj Formation — Tous droits
+            réservés
           </p>
           <div style={{ display: "flex", gap: 24 }}>
             <a

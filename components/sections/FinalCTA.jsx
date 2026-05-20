@@ -1,73 +1,66 @@
 export default function FinalCTA() {
   return (
     <section
+      className="bg-dark bg-grid-fine"
       style={{
         padding: "100px 0",
-        background: "var(--kelaj-bleu)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Decorative circles */}
+      {/* Halo cuivre */}
       <div
+        className="halo-copper"
         style={{
           position: "absolute",
-          top: "-20%",
+          top: "-30%",
           right: "-10%",
-          width: 500,
-          height: 500,
+          width: 700,
+          height: 700,
           borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(197,165,90,0.06) 0%, transparent 70%)",
           pointerEvents: "none",
+          opacity: 0.35,
         }}
       />
+      {/* Halo bleu */}
       <div
+        className="halo-blue"
         style={{
           position: "absolute",
-          bottom: "-20%",
+          bottom: "-30%",
           left: "-10%",
-          width: 400,
-          height: 400,
+          width: 600,
+          height: 600,
           borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)",
           pointerEvents: "none",
+          opacity: 0.5,
         }}
       />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+        <div
+          style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}
+        >
           <span
             className="label"
             style={{
               display: "inline-block",
               marginBottom: 20,
-              color: "var(--kelaj-or)",
             }}
           >
             Prochaine étape
           </span>
           <h2
+            className="section-title"
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
-              fontWeight: 700,
-              lineHeight: 1.15,
-              color: "var(--kelaj-blanc)",
               marginBottom: 20,
-              letterSpacing: "-0.01em",
             }}
           >
-            Prêt à faire évoluer votre carrière ?
+            Prêt à transformer votre carrière ?
           </h2>
           <p
-            style={{
-              fontSize: "clamp(16px, 2vw, 18px)",
-              color: "rgba(255,255,255,0.75)",
-              lineHeight: 1.6,
-              margin: "0 auto 40px",
-              maxWidth: 540,
-            }}
+            className="display-sub"
+            style={{ margin: "0 auto 40px", maxWidth: 540 }}
           >
             Que vous soyez indépendant, salarié ou dirigeant, nous avons une
             formation adaptée à vos objectifs. Parlez-en à un conseiller ou
@@ -86,11 +79,6 @@ export default function FinalCTA() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              style={{
-                background: "var(--kelaj-or)",
-                color: "var(--kelaj-bleu)",
-                boxShadow: "0 4px 14px rgba(197, 165, 90, 0.25)",
-              }}
             >
               Prendre RDV avec un conseiller
               <svg
