@@ -13,6 +13,23 @@ export default function Hero() {
       <div className="beam" />
       <div className="beam-core" />
 
+      {/* Barre dorée/orangée verticale — lumière structurelle */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-5%",
+          left: "58%",
+          transform: "translateX(-50%)",
+          width: 70,
+          height: "110%",
+          background:
+            "linear-gradient(180deg, transparent 0%, rgba(199, 138, 74, 0.25) 20%, rgba(199, 138, 74, 0.35) 50%, rgba(199, 138, 74, 0.25) 80%, transparent 100%)",
+          filter: "blur(28px)",
+          pointerEvents: "none",
+          zIndex: 0,
+          opacity: 0.6,
+        }}
+      />
       {/* Halo cuivre subtil */}
       <div
         className="halo-copper"
