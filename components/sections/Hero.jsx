@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
@@ -58,6 +60,31 @@ export default function Hero() {
           opacity: 0.35,
         }}
       />
+
+      {/* K filigrane — signature visuelle structurelle */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-8%",
+          right: "-14%",
+          width: 900,
+          height: 900,
+          pointerEvents: "none",
+          zIndex: 0,
+          opacity: 0.035,
+        }}
+      >
+        <Image
+          src="/assets/img/logo-k.png"
+          alt=""
+          fill
+          style={{
+            objectFit: "contain",
+            filter: "brightness(0) invert(1)",
+          }}
+          priority={false}
+        />
+      </div>
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div

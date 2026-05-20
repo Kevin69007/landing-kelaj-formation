@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FinalCTA() {
   return (
     <section
@@ -40,6 +42,31 @@ export default function FinalCTA() {
           opacity: 0.3,
         }}
       />
+
+      {/* K filigrane — très discret */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-15%",
+          left: "-10%",
+          width: 550,
+          height: 550,
+          pointerEvents: "none",
+          zIndex: 0,
+          opacity: 0.02,
+        }}
+      >
+        <Image
+          src="/assets/img/logo-k.png"
+          alt=""
+          fill
+          style={{
+            objectFit: "contain",
+            filter: "brightness(0) invert(1)",
+          }}
+          priority={false}
+        />
+      </div>
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div style={{ maxWidth: 640, margin: "0 auto", textAlign: "center" }}>
