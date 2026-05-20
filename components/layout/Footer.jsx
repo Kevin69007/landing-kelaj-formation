@@ -45,12 +45,12 @@ export default function Footer() {
             <Image
               src="/assets/img/logo-square.png"
               alt="Kelaj Formation"
-              width={64}
-              height={64}
+              width={140}
+              height={140}
               style={{
                 objectFit: "contain",
                 filter: "brightness(0) invert(1)",
-                marginTop: 16,
+                marginTop: 20,
                 opacity: 0.9,
               }}
             />
