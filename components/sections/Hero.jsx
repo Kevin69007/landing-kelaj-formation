@@ -1,6 +1,22 @@
+"use client";
 import Image from "next/image";
+import { trackEvent } from "@/lib/tracking";
 
 export default function Hero() {
+  const handleRdvClick = () => {
+    trackEvent("Schedule", {
+      content_name: "Prendre RDV — Hero",
+      content_category: "Landing",
+    });
+  };
+
+  const handleCatalogueClick = () => {
+    trackEvent("ViewContent", {
+      content_name: "Explorer le catalogue — Hero",
+      content_category: "Landing",
+    });
+  };
+
   return (
     <section
       className="grid-fine"
@@ -143,6 +159,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
+                onClick={handleRdvClick}
               >
                 Prendre RDV
                 <svg
@@ -165,6 +182,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
+                onClick={handleCatalogueClick}
               >
                 Explorer le catalogue
               </a>
