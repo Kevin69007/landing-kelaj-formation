@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const fbPixelId = '853995805272230';
+  const fbPixelId = '3934981656760487';
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   const linkedInId = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID;
