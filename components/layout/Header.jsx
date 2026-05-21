@@ -1,6 +1,22 @@
+"use client";
 import Image from "next/image";
+import { trackEvent } from "@/lib/tracking";
 
 export default function Header() {
+  const handleRdvClick = () => {
+    trackEvent("Schedule", {
+      content_name: "Prendre RDV — Header",
+      content_category: "Landing",
+    });
+  };
+
+  const handleCatalogueClick = () => {
+    trackEvent("ViewContent", {
+      content_name: "Catalogue — Header",
+      content_category: "Landing",
+    });
+  };
+
   return (
     <header
       style={{
@@ -26,6 +42,7 @@ export default function Header() {
           href="https://formation.kelaj-company.com"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleCatalogueClick}
         >
           <Image
             src="/assets/img/logo-horizontal.png"
@@ -49,6 +66,7 @@ export default function Header() {
               color: "rgba(242,242,240,0.75)",
               transition: "color 0.25s",
             }}
+            onClick={handleCatalogueClick}
           >
             Formations
           </a>
@@ -58,6 +76,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="btn-primary"
             style={{ padding: "10px 20px", fontSize: "13px" }}
+            onClick={handleRdvClick}
           >
             Prendre RDV
           </a>
